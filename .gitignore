@@ -4,7 +4,13 @@ archive
 results
 accuracy_insights.csv
 accuracy_insights_table.png
-qwk_results.csv
+metrics_results.csv
 invalid_counts.csv
 .idea
 .DS_Store
+stratified_samples
+bias_results.csv
+exercise_analysis_summary.csv
+mat_exercise_analysis_summary.csv
+stat_exercise_analysis_summary.csv
+bank_exercise_analysis_summary.csv
