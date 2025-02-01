@@ -2,19 +2,7 @@ import random
 from collections import defaultdict
 import math
 
-def stratified_random_sample(data, num_groups=3, exercise_sample_size=10, submissions_per_exercise=5):
-    """
-    Stratified sampling ensuring diversity in exercises, uniform submissions per exercise, and stratification by `maxPoints`.
-
-    Args:
-    - data: The dataset to sample from, where each item has "task_id", "course_slug", and "maxPoints".
-    - num_groups: Number of groups to divide the dataset into (e.g., thirds, fifths).
-    - exercise_sample_size: Number of exercises to sample from each course.
-    - submissions_per_exercise: Number of submissions to sample per exercise.
-
-    Returns:
-    - A dictionary containing stratified random samples for each course, formatted for evaluation.
-    """
+def sample_data(data, num_groups=3, exercise_sample_size=10, submissions_per_exercise=5):
     # Separate data by course_slug
     courses = defaultdict(list)
     for item in data:
@@ -37,7 +25,6 @@ def stratified_random_sample(data, num_groups=3, exercise_sample_size=10, submis
         for exercise_id in sampled_exercise_ids:
             exercise_submissions = exercises[exercise_id]
 
-            # Stratify by `maxPoints`
             sorted_data = sorted(exercise_submissions, key=lambda x: x["maxPoints"])
 
             # Split data into `num_groups`

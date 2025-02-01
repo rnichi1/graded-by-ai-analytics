@@ -9,8 +9,12 @@ invalid_counts.csv
 .idea
 .DS_Store
 stratified_samples
+samples
 bias_results.csv
 exercise_analysis_summary.csv
 mat_exercise_analysis_summary.csv
 stat_exercise_analysis_summary.csv
 bank_exercise_analysis_summary.csv
+bank_exercise_analysis_strategies.csv
+stat_exercise_analysis_strategies.csv
+mat_exercise_analysis_strategies.csv
